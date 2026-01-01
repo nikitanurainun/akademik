@@ -1,3 +1,13 @@
+<?php
+    //session --> disimpan diserver | cookies--> disimpan di web
+
+    session_start();
+    //cek login sudah ada atau belum
+    if(!isset($_SESSION['login']))
+    {
+        header("Location: login.php");
+    }
+?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -6,7 +16,7 @@
     <title>List Data Mahasiswa</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
   </head>
-  <body>
+    <body>
     <nav class="navbar navbar-expand-lg bg-info">
         <div class="container">
             <a class="navbar-brand" href="#"><h3>Akademik</h3></a>
@@ -23,6 +33,9 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="index.php?page=prodi">Program Studi</a>
+                    </li>
+                    <li class="nav-item ms-3">
+                         <a href="logout.php" onclick="return confirm('Yakin ingin logout?')" class="btn btn-outline-danger">Logout</a>
                     </li>
                 </ul>
             </div>
