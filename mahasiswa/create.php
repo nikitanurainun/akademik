@@ -3,7 +3,7 @@
     $prodi = $koneksi->query("SELECT id, nama_prodi, jenjang FROM prodi");
 ?>
 <h1>Input Data Mahasiswa</h1>
-    <form action="/pemograman-web/akademik/proses.php" method="post">
+     <form action="/pemrograman_web/akademik/proses.php" method="post">
         <div class="mb-3">
                 <label for="nim" class="form-label">NIM</label>
                 <input type="text" class="form-control" id="nim" name="nim">
